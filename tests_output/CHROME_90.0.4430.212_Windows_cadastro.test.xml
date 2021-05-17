@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="cadastro.test"
+    errors="0" failures="0" hostname="" id="" package="cadastro.test" skipped="0"
+    tests="3" time="7.927" timestamp="">
+  
+    <testcase name="Dado que acesso o formulário de cadastro" classname="cadastro.test" time="2.377" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Quando submeto o formulário com os meus dados pessoais" classname="cadastro.test" time="5.453" assertions="0">
+    </testcase>
+  
+    <testcase name="Então é apresentada a mensagem usuário criado com sucesso" classname="cadastro.test" time="0.09700" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
