@@ -1,19 +1,49 @@
-// const formAcoes = {
-//   insertNome: function (nome) {
-//     return this.setValue('@inputNome', nome)
-//   },
-//   insetUltimoNome: function(ultimoNome) {   
-//     return this.setValue('@inputUltimoNome')
-//   } 
-// }
+
+var CadastroActions = {
+
+  telaInicial: function() {
+    return this
+      .navigate()
+      .waitForElementVisible('@telaNovoUsuario', 3000)
+      .assert.containsText('@telaNovoUsuario', "Novo Usuário!!")
+      .waitForElementVisible('@formNovoUsuario', 3000)
+  }
+}
+var PreechimentoActions = {
+  inserirDados: function() {
+    return this 
+      .setValue('@inputNome', 'Diogo')
+      .setValue('@inputUltimoNome', 'Oliveira')
+      .setValue('@inputEmail', 'diogooliveira8@hotmail.com')
+      .setValue('@inputEndereco', 'rua dos QAs')
+      .setValue('@inputUniversidade', 'universidade sp')
+      .setValue('@inputProfissao', 'qa-tester')
+      .setValue('@inputGenero', 'Masculino')
+      .setValue('@inputIdade', 21)
+
+  },
+  cadastrarUsuario: function() {
+    return this 
+      .assert.visible('@botaoCriar')
+      .click('@botaoCriar')
+  }  
+} 
+var ValidacaoActions = {
+  validadarCadastroConcluido: function() {
+
+    return this
+      .waitForElementVisible('@userCriado', 3000)
+      .assert.containsText('@userCriado', 'Usuário Criado com sucesso')
+  }
+}
 
 module.exports = {
 
   url: "https://automacaocombatista.herokuapp.com/users/new",
    
-   //commands: [formAcoes],
- 
-   elements: {
+   commands: [CadastroActions, PreechimentoActions, ValidacaoActions],
+    
+    elements: {
      telaNovoUsuario: 'div.col.s9 > div:nth-child(2)  > div > h5',
      formNovoUsuario: '#new_user',
      inputNome:'#user_name',
@@ -30,5 +60,5 @@ module.exports = {
      botaoVoltar: 'a.btn[href$="users"]',
      barraSucessoDiogo: 'a[href="/treinamento/home"]',
    },
+
 };
- 

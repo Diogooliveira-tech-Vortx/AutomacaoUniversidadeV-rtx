@@ -5,9 +5,9 @@
 
   <testsuite name="cadastro.test"
     errors="0" failures="0" hostname="" id="" package="cadastro.test" skipped="0"
-    tests="3" time="7.927" timestamp="">
+    tests="3" time="4.000" timestamp="">
   
-    <testcase name="Dado que acesso o formulário de cadastro" classname="cadastro.test" time="2.377" assertions="3">
+    <testcase name="Dado que acesso o formulário de cadastro" classname="cadastro.test" time="2.449" assertions="3">
 
     
 
@@ -16,14 +16,12 @@
     
     </testcase>
   
-    <testcase name="Quando submeto o formulário com os meus dados pessoais" classname="cadastro.test" time="5.453" assertions="0">
+    <testcase name="Quando submeto o formulário com os meus dados pessoais" classname="cadastro.test" time="1.496" assertions="1">
+
+    
     </testcase>
   
-    <testcase name="Então é apresentada a mensagem usuário criado com sucesso" classname="cadastro.test" time="0.09700" assertions="4">
-
-    
-
-    
+    <testcase name="Então é apresentada a mensagem usuário criado com sucesso" classname="cadastro.test" time="0.05500" assertions="2">
 
     
 
