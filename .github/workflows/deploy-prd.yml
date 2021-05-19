@@ -1,0 +1,31 @@
+name: OneGestor.Automation - PRD
+
+on: 
+
+  push:
+    branches:
+      [ master ]
+    
+
+jobs:
+  run-prod:
+    strategy:
+      matrix:
+        node-version: [12.x]
+    name: Teste - production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2      
+
+      - name : Install dependencies
+        run: |
+              npm i -f
+      - name : Execute
+        run: npm run test:production
+
+      - name: Publish Unit Test Results
+        uses: mikepenz/action-junit-report@v2
+        if: always()
+        with:
+          report_paths: 'tests_output/**/*.xml'
+          github_token: ${{ github.token }}

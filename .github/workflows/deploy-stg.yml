@@ -1,0 +1,30 @@
+name: OneGestor.Automation - STG
+
+on: 
+
+  push:
+    branches:
+      [ stage ]
+
+jobs:
+  run-stage:    
+    strategy:
+      matrix:
+        node-version: [12.x]
+    name: Teste - stage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2      
+
+      - name : Install dependencies
+        run: |
+              npm i -f
+      - name : Execute
+        run: npm run test:stage
+
+      - name: Publish Unit Test Results
+        uses: mikepenz/action-junit-report@v2
+        if: always()
+        with:
+          report_paths: 'tests_output/**/*.xml'
+          github_token: ${{ github.token }}
