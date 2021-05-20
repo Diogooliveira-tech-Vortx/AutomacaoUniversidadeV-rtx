@@ -3,7 +3,7 @@ require('babel-core/register')
 const chromedriver = require('chromedriver');
 
 module.exports = {
-  
+
   src_folders: ['tests'],
   page_objects_path: './pages',
   globls_path: './hooks/globals.js',
@@ -14,8 +14,8 @@ module.exports = {
     port: 9515
   },
 
-  test_settings : {
-    default : {
+  test_settings: {
+    default: {
       desiredCapabilities: {
         browserName: "chrome"
       }

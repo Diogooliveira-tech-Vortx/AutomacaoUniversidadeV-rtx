@@ -6,7 +6,8 @@ module.exports = {
     browser.page
       .novoUsuario()
       .navigate()
-      .telaInicial('@telaNovoUsuario', "Novo Usuário!!")
+      .telaInicial('@telaNovoUsuario')
+      .expectMensage("Novo Usuário!!")
   },
   'Quando submeto o formulário com os meus dados pessoais': (browser) => {
 
@@ -19,6 +20,6 @@ module.exports = {
 
     browser.page
       .novoUsuario()
-      .validadarCadastroConcluido()
+      .expectCadastroConcluido('Usuário Criado com sucesso')
   },
 };

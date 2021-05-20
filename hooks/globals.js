@@ -6,6 +6,6 @@ module.exports = {
     },
     afterEach: (browser, done) => {
         browser.end()
-        done()
+        done()  //call back
     },
 }
