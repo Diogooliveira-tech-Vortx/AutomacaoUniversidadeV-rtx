@@ -7,7 +7,6 @@
     "test": ".\\node_modules\\.bin\\nightwatch.cmd",
     "test:stage": "nightwatch -e stg",
     "test:production": "nightwatch -e prd"
- 
   },
   "keywords": [
     "automacao",

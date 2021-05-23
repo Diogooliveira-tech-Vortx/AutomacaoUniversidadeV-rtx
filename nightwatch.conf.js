@@ -16,11 +16,23 @@ module.exports = {
 
   test_settings: {
     default: {
+
+      globals: {
+        imagesRepo: './tests_output/images/',
+      },
+
       desiredCapabilities: {
         browserName: "chrome"
-      }
-    }
-  }
+      },
+
+      "screenshots": {
+        "enabled": true,
+        "on_failure": true,
+        "on_error": true,
+        "path": "./tests_output/images/",
+      },
+    },
+  },
 };
 
 
