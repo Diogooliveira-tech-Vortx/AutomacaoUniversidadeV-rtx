@@ -22,7 +22,11 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName: "chrome"
+        browserName: "chrome",
+        chromeOptions: {
+          args: ["--headless"],
+        },
+
       },
 
       "screenshots": {
