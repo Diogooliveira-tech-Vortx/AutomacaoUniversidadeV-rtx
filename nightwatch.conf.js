@@ -26,7 +26,6 @@ module.exports = {
         chromeOptions: {
           args: ["--headless"],
         },
-
       },
 
       "screenshots": {
