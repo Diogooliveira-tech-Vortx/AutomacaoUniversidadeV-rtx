@@ -27,7 +27,8 @@ module.exports = {
           args: ["--headless"],
         },
       },
-
+      skip_testcases_on_fail: true,
+      
       "screenshots": {
         "enabled": true,
         "on_failure": true,
